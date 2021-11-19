@@ -1,4 +1,4 @@
-# Projekt 1: podstawy HTML i CSS
+z# Projekt 1: podstawy HTML i CSS
 
 Witajcie na pierwszym projekcie! Dzisiaj zajmiecie się stworzeniem dwóch prostych layoutów, wykorzystując wiedzę, którą do tej pory zgromadziliście.
 
