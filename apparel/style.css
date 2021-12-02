@@ -1,53 +1,57 @@
+html {
+	box-sizing: border-box;
+}
+:root {
+	font-size: 62.5%;
+}
 body {
 	background-color: gainsboro;
 	display: flex;
-	height: 100vh;
+	height: 100%;
 	justify-content: center;
 	align-items: center;
 }
 .container {
 	display: flex;
 	flex-direction: row;
-	width: 75vw;
-	height: 85vh;
+	width: 100vw;
+	height: 100vh;
 	margin: 0;
 	padding: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	box-shadow: 10px 10px 15px grey;
 	max-width: 1440px;
-	min-width: 1150px;
-	min-height: 700px;
 	max-height: 800px;
 }
 .content {
 	height: 100%;
 	background-image: url("images/bg-pattern-desktop.svg");
 	background-repeat: no-repeat;
-	background-color: white;
+	background-size: cover;
 	flex-direction: column;
 	justify-content: center;
 	padding-left: 7.5%;
+	background-color: white;
 }
 .foto img {
 	height: 100%;
 	width: 65vh;
-	min-width: 533px;
-	max-width: 610px;
-	min-height: 700px;
-	max-height: 800px;
+	/* max-width: 610px;
+	max-height: 800px; */
 }
 .logo {
-	padding-top: 50px;
-	padding-bottom: 150px;
+	padding-top: 5rem;
+	padding-bottom: 15rem;
 }
 .title {
-	font-size: 200%;
+	font-size: 3rem;
 	color: rosybrown;
 	align-content: center;
 	line-height: 2em;
 	padding-bottom: 25px;
 	letter-spacing: 15px;
+	max-width: 35rem;
 }
 .header1 {
 	margin: 0;
@@ -90,7 +94,8 @@ button {
 	background: linear-gradient(
 		311deg,
 		rgba(239, 147, 148, 1) 61%,
-		rgba(245, 184, 183, 1) 81%);
+		rgba(245, 184, 183, 1) 81%
+	);
 	box-shadow: 0px 6px 10px rgb(239, 147, 148);
 }
 button img {
@@ -109,10 +114,7 @@ button img {
 	padding-right: 30%;
 	padding-bottom: 40px;
 	line-height: 30px;
-}
-footer {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-size: 1.5rem;
 }
 input:invalid:focus {
 	border-color: rgb(245, 184, 183);
@@ -122,7 +124,7 @@ input:invalid:focus {
 }
 input:required:invalid {
 	border: 1px solid rgb(245, 184, 183);
-	position: absolute; */
+	position: absolute;
 }
 input:invalid:focus ~ small {
 	position: relative;
@@ -131,4 +133,49 @@ input:invalid:focus ~ small {
 	font-weight: 600;
 	top: 40px;
 	left: -100px;
+}
+.foto-mobile {
+	display: none;
+}
+
+@media (max-width: 371px) {
+	body {
+		background-color: white;
+		display: flex;
+	}
+	.container {
+		width: 100vh;
+		display: flex;
+		flex-wrap: wrap;
+		box-shadow: none;
+		overflow: scroll;
+	}
+	.content {
+		background-color: white;
+		position: absolute;
+		background-image: none;
+		padding: 0;
+		justify-content: center;
+	}
+	.foto {
+		display: none;
+	}
+	.foto-mobile {
+		display: flex;
+		max-height: 45rem;
+		overflow: hidden;
+	}
+	.logo {
+		padding: 2rem;
+	}
+	.title {
+		padding: 0;
+	}
+	h1 {
+		display: flex;
+		justify-content: center;
+	}
+	.text {
+		padding: 10%;
+	}
 }
