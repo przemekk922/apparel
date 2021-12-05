@@ -1,181 +1,226 @@
-html {
-	box-sizing: border-box;
-}
 :root {
 	font-size: 62.5%;
 }
+html {
+	box-sizing: border-box;
+	font-family: "Josefin Sans", sans-serif;
+}
 body {
-	background-color: gainsboro;
 	display: flex;
-	height: 100%;
 	justify-content: center;
 	align-items: center;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background-color: gainsboro;
 }
 .container {
 	display: flex;
-	flex-direction: row;
-	width: 100vw;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	box-shadow: 10px 10px 15px grey;
+	justify-content: space-between;
 	max-width: 1440px;
 	max-height: 800px;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	box-shadow: 10px 10px 15px grey;
+}
+.content-box {
+	max-width: 58%;
+	background-image: url("images/bg-pattern-desktop.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	justify-content: center;
 }
 .content {
-	height: 100%;
-	background-image: url("images/bg-pattern-desktop.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	flex-direction: column;
+	display: flex;
 	justify-content: center;
-	padding-left: 7.5%;
-	background-color: white;
-}
-.foto img {
-	height: 100%;
-	width: 65vh;
-	/* max-width: 610px;
-	max-height: 800px; */
+	align-content: flex-start;
+	flex-direction: column;
+	margin: 0;
+	padding-left: 14%;
+	padding-right: 40%;
 }
 .logo {
-	padding-top: 5rem;
-	padding-bottom: 15rem;
+	display: flex;
+	padding-top: 6rem;
+}
+.logo img {
+	height: 3.5rem;
 }
 .title {
-	font-size: 3rem;
-	color: rosybrown;
+	flex-wrap: wrap;
 	align-content: center;
+	margin-top: 12rem;
+	font-size: 3.5rem;
+	letter-spacing: 1.5rem;
 	line-height: 2em;
-	padding-bottom: 25px;
-	letter-spacing: 15px;
-	max-width: 35rem;
 }
 .header1 {
-	margin: 0;
-	font-weight: 200;
+	font-weight: 300;
+	color: hsl(0, 36%, 70%);
 }
 .header2 {
-	color: black;
-	margin: 0;
-	font-weight: 500;
+	color: hsl(0, 6%, 24%);
+}
+.text {
+	min-width: 40rem;
+	padding-bottom: 4rem;
+	line-height: 3rem;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: hsl(0, 36%, 70%);
 }
 .emailbox {
 	position: relative;
-	border: 1px solid rgb(245, 184, 183);
-	border-radius: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 400px;
+	border-radius: 20rem;
+	width: 40rem;
 }
 input {
 	position: absolute;
 	outline: none;
-	border-radius: 40px;
-	height: 40px;
-	width: 400px;
 	z-index: 1;
+	border-radius: 4rem;
+	height: 5rem;
+	width: 40rem;
 	text-indent: 5%;
-	border: 1px solid rgb(245, 184, 183);
+	border: 1px solid hsl(0, 36%, 70%);
+	font-weight: 400;
+	color: hsl(0, 6%, 24%);
 }
 button {
 	position: absolute;
-	right: 0px;
-	border-radius: 40px;
-	border: none;
-	height: 44px;
-	width: 70px;
 	z-index: 3;
 	right: -5px;
-	background: rgb(239, 147, 148);
-	background: linear-gradient(
-		311deg,
-		rgba(239, 147, 148, 1) 61%,
-		rgba(245, 184, 183, 1) 81%
-	);
-	box-shadow: 0px 6px 10px rgb(239, 147, 148);
+	border: none;
+	border-radius: 40px;
+	height: 5.5rem;
+	width: 9rem;
+	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	cursor: pointer;
 }
 button img {
 	position: absolute;
-	right: 0px;
-	border-radius: 40px;
-	height: 35px;
-	width: 20px;
 	z-index: 2;
-	right: 30%;
-	top: 10%;
-	background-size: 46px 70px;
+	bottom: 2rem;
+	left: 4.2rem;
+	height: 33%;
+	width: 12%;
 }
-.text {
-	color: rosybrown;
-	padding-right: 30%;
-	padding-bottom: 40px;
-	line-height: 30px;
-	font-size: 1.5rem;
-}
+
 input:invalid:focus {
-	border-color: rgb(245, 184, 183);
+	border-width: 1.5px;
+	border-color: hsl(0, 93%, 68%);
 	background-image: url("images/icon-error.svg");
 	background-repeat: no-repeat;
-	background-position: 80%;
+	background-position: 75%;
 }
 input:required:invalid {
-	border: 1px solid rgb(245, 184, 183);
 	position: absolute;
+	border: 3px solid hsl(0, 93%, 68%);
 }
-input:invalid:focus ~ small {
+
+input:invalid:focus ~ p {
 	position: relative;
-	z-index: 3;
-	color: tomato;
+	z-index: 1;
+	top: 4rem;
+	right: 12rem;
 	font-weight: 600;
-	top: 40px;
-	left: -100px;
+	color: hsl(0, 93%, 68%);
+}
+button:hover {
+	box-shadow: 6px 25px 40px -15px rgba(195, 144, 145, 1);
+	background: linear-gradient(
+		295deg,
+		rgba(244, 188, 188, 1) 49%,
+		rgba(246, 220, 220, 1) 76%
+	);
+}
+
+.foto {
+	max-width: 42%;
 }
 .foto-mobile {
 	display: none;
 }
 
-@media (max-width: 371px) {
-	body {
-		background-color: white;
-		display: flex;
-	}
-	.container {
-		width: 100vh;
-		display: flex;
-		flex-wrap: wrap;
-		box-shadow: none;
-		overflow: scroll;
-	}
+@media (max-width: 1050px) {
 	.content {
-		background-color: white;
-		position: absolute;
-		background-image: none;
-		padding: 0;
-		justify-content: center;
+		padding: 5rem auto;
 	}
-	.foto {
-		display: none;
-	}
-	.foto-mobile {
-		display: flex;
-		max-height: 45rem;
-		overflow: hidden;
-	}
-	.logo {
-		padding: 2rem;
+}
+@media (max-height: 720px) {
+	body {
+		display: inline;
+		height: auto;
+		align-items: baseline;
 	}
 	.title {
+		margin-top: 5px;
+	}
+}
+@media (max-width: 850px) {
+	.container {
+		width: 800px;
+		max-width: none;
+		max-height: none;
+		box-shadow: none;
+	}
+	.content-box {
+		position: absolute;
+		background-image: none;
+		background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+		max-width: none;
+		max-height: none;
+		min-width: 100%;
+		min-height: 100%;
+	}
+	.content {
+		display: flex;
+		align-items: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.logo {
+		align-self: baseline;
+		margin: 5rem;
+		padding: 0.5rem;
+	}
+	.foto-mobile {
+		display: inline-block;
+		max-height: 40rem;
+		overflow: hidden;
+	}
+	.foto-mobile img {
+		object-fit: cover;
+	}
+	.title {
+		display: flex;
+		flex-direction: column wrap;
+		max-width: 50%;
+		font-size: 3rem;
+		margin-top: 5%;
+	}
+	.text {
+		max-width: 50%;
+		line-height: 40px;
+		font-size: 2.5rem;
+		text-align: center;
 		padding: 0;
 	}
 	h1 {
-		display: flex;
-		justify-content: center;
+		text-align: center;
 	}
-	.text {
-		padding: 10%;
+	.emailbox {
+		height: 15rem;
+	}
+	input {
+		font-size: 20px;
+		background-color: hsl(0, 100%, 98%);
+	}
+	.foto {
+		display: none;
 	}
 }
